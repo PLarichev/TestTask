@@ -6,7 +6,7 @@
 
 1. Склонируйте репозиторий:
 
-git clone https://github.com/your/repository.git
+git clone https://github.com/PLarichev/TestTask.git
 
 2. Создайте виртуальное окружение:
 
