@@ -13,6 +13,7 @@ app = FastAPI(
     debug=config.DEBUG,
 )
 
+
 app.include_router(api_router)
 app.include_router(api_router_with_token)
 

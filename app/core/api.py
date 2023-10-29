@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Depends
-from app.endpoints import auth, posts, reactions
+from app.endpoints import auth, posts, reactions, users
 from app.core.auth import get_current_user, oauth2_scheme
 
 api_router = APIRouter(prefix="/api", redirect_slashes=True, responses={404: {"description": "Not found"}})
@@ -15,4 +15,5 @@ api_router_with_token = APIRouter(
 
 api_router_with_token.include_router(posts.router, tags=["Posts"])
 api_router_with_token.include_router(reactions.router, tags=["Reactions"])
+api_router_with_token.include_router(users.router, tags=["Users"])
 

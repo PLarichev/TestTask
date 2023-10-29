@@ -81,6 +81,7 @@ def add_reaction(session: Session,
     session.refresh(new_reaction)
     return new_reaction
 
+
 @pytest.fixture
 def test_user(db_session: Session):
     return add_user(db_session)
